@@ -79,7 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    @isset($message)
+                    {{ $message }}
+                    @else
                     Laravel
+                    @endisset
                 </div>
 
                 <div class="links">

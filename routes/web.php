@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/message', function () {
+    return view('welcome', ['message' => \App\Message::first()->text]);
+});
