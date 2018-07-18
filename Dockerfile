@@ -8,4 +8,5 @@ RUN apt-get update && apt-get install -y git unzip mysql-client --no-install-rec
     composer install && \
     docker-php-ext-install pdo_mysql && \
     mv .env.example .env && \
+    php artisan key:generate && \
     chown -R www-data. .
